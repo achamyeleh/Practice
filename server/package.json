@@ -1,0 +1,43 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "babel": "babel --presets es2015 js/main.js -o build/main.bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ts-node ind"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^13.7.0",
+    "apollo-server": "^2.9.16",
+    "apollo-server-express": "^2.9.16",
+    "body-parser": "^1.19.0",
+    "connect": "^3.7.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "graphql": "^14.6.0",
+    "graphql-import": "^0.7.1",
+    "graphql-merge-import": "^0.2.0",
+    "graphql-tag": "^2.10.1",
+    "graphql-tools": "^4.0.7",
+    "graphql-type-json": "^0.3.0",
+    "graphql-upload": "^8.1.0",
+    "joi": "^14.3.1",
+    "merge-graphql-schemas": "^1.7.6",
+    "pg": "^7.18.1",
+    "qs-middleware": "^1.0.3",
+    "react-scripts": "3.1.2",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^0.17.6",
+    "typeorm": "^0.2.22",
+    "typescript": "^3.7.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "nodemon": "^2.0.2"
+  }
+}

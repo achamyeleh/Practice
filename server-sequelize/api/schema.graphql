@@ -1,0 +1,44 @@
+type User {
+  id: ID!
+  firstName: String
+  secondName: String
+}
+
+type UserResponse {
+  data: [User]
+  limit: Int
+  offset: Int
+  total: Int
+}
+
+type Query {
+  user(id: ID!): User
+  users(
+    filters: UserFilterInput
+    pagination: PaginationInput
+    sort: UserSortInput
+  ): UserResponse
+}
+
+input UserFilterInput {
+  id: ID
+  name: String
+  description: String
+}
+
+input UserSortInput {
+  id: SortEnum
+  name: SortEnum
+  description: SortEnum
+}
+
+input UserInput {
+  name: String
+  description: String
+}
+
+type Mutation {
+  createUser(data: UserInput): User!
+  updateUser(id: ID, data: UserInput): User!
+  deleteUser(id: ID): Boolean!
+}

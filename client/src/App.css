@@ -1,0 +1,155 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #616469;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.header {
+  color: greenyellow;
+  background-color: #616469;
+  text-decoration: underline;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+img {
+  border-radius: 50%;
+  margin: 20px;
+  max-width: 100%;
+  height: auto;
+  opacity: 0.5;
+}
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 186, 25, 0.5);
+}
+.imgFilter {
+  filter: grayscale(10%);
+  opacity: 1;
+}
+.cardContainer {
+  margin-left: 40px;
+}
+#card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 2px;
+}
+.text {
+  color: brown;
+  text-decoration: underline;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: -1px;
+  line-height: 1.2;
+  word-spacing: 4px;
+  text-shadow: rgb(7, 7, 6);
+  font-family: "Times New Roman", Times, serif;
+  font-style: oblique;
+  font-size: 32px;
+  font-weight: bold;
+}
+.about{
+margin: 20px;
+}
+.footer {
+background-color: burlywood;  
+border-top: 1px solid #E7E7E7;
+/* text-align: center; */
+padding: 20px;
+/* position: relative;
+left: 0;
+bottom: 0; */
+width: 100%;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+a {
+  padding: 10Px;
+  text-decoration: none;
+}
+.regForm {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 30px;
+}
+.item {
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+/* .left {
+  text-align:left;
+  float:left;
+  }
+  .right {
+  float:right;
+  text-align:right;
+  }
+  .centered {
+  text-align:center;
+  } */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+  .headers {
+    display: none
+  }
+  .bar{
+    display: inline;
+  }
+  .mobileFooter{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.ache {
+  font-size: 6px;
+  color: red;
+}
+
+
+@media only screen and (max-width: 800px){
+  .ui.stackable.menu .item {
+  width: 100%!important;
+}
+}
+.heading {
+  font-size: 1.5em;
+}
+.todos {
+  margin: 2em;
+  border: solid gray;
+}

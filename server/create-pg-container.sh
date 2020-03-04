@@ -1,0 +1,1 @@
+docker run --rm -e POSTGRES_PASSWORD=mysecretpassword -e POSTGRES_DB=test -p "5432:5432" -d postgres:11.5
