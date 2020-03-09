@@ -3,8 +3,7 @@ import { ErrorMessage, Field, Form as FForm, Formik } from 'formik';
 import React, { FC } from 'react';
 import { Button, Dropdown, Form as SForm } from 'semantic-ui-react';
 import * as Yup from 'yup';
-import './App.css';
-import DataGrid from './grid';
+import DataGrid from './components/grid';
 
 const gql = require('graphql-tag')
 

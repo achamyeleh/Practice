@@ -1,11 +1,10 @@
 import React, { FC } from 'react';
 import { IconContext } from 'react-icons';
 import { FaCopyright, FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa';
-import './App.css';
 
 
 type Props = {
-  name: string;
+  mobile: false;
 };
 const Footer: FC<Props> = Props => {
   return (<div>

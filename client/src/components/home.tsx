@@ -1,11 +1,10 @@
 import React, { FC } from 'react';
-import './App.css';
-import avator from './images/avator.png';
-const shoes:any = require('./images/shoes.jpg')
-const girl:any = require('./images/girl.jpg')
-const redShoe:any = require('./images/redShoe.png')
-const whiteShoe:any = require('./images/whiteShoe.png')
-const grayShoe:any = require('./images/grayShoe.png')
+import avator from '../images/avator.png';
+const shoes:any = require('../images/shoes.jpg')
+const girl:any = require('../images/girl.jpg')
+const redShoe:any = require('../images/redShoe.png')
+const whiteShoe:any = require('../images/whiteShoe.png')
+const grayShoe:any = require('../images/grayShoe.png')
 type Props = {
   name: string
 }

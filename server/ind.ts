@@ -63,6 +63,7 @@ const startServer = async () => {
   server.applyMiddleware({ app, path: '/graphql' });
 //www.localhost:5000/page/Abebe/40?tutorial=example&sort=ASC
   app.get('/page/:name/:age', async(req, res)=> {
+    res.header('Access-Control-Allow-Origin', '*')
     const repository = await getRepository<User>('User', 'practice') // 'practice' is connection name
     const user = await repository.findOne({id:2})
     console.log('server is up and running', user)
