@@ -151,5 +151,21 @@ a {
 }
 .todos {
   margin: 2em;
-  border: solid gray;
+  border: solid rgb(142, 226, 149);
+  padding: 20px;
+}
+.counter {
+  margin-left: 20px;
+  padding: 20px;
+  border: grey solid;
+  
+}
+.pic {
+  width: 160px;
+  height: 160px;
+}
+.meme {
+  border: solid rebeccapurple;
+  padding: 20px;
+  margin: 20px;
 }

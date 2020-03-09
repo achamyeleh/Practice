@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import 'semantic-ui-css/semantic.min.css';
 import { Button, Icon } from 'semantic-ui-react';
-import '../App.css';
 
 export default function Todo() {
   const [field, setField] = useState('')

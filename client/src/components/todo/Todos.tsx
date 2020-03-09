@@ -3,7 +3,7 @@ import Todo from './Todo'
 
 export default function Todos() {
   return (
-    <div>
+    <div >
       <Todo />
     </div>
   )

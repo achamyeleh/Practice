@@ -10,6 +10,8 @@ import './App.css';
 import Counter from './components/Counter';
 import Footer from './components/footer';
 import Header from './components/header';
+import MemeGenerator from './components/MemeGenerator';
+import Todos from './components/todo/Todos';
 import state from './redux/store';
 const cache = new InMemoryCache()
   const link = new HttpLink({
@@ -28,7 +30,9 @@ const App = () => {
     <ApolloProvider client={client}>
       <Provider store={state}>
       <Header mobile={false} />
+      <Todos />
       <Counter />
+      <MemeGenerator />
       <Footer mobile={false} />
       </Provider>
     </ApolloProvider>

@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import { Icon, Menu } from 'semantic-ui-react';
-import SignUp from '../signup';
 import Home from './home';
 import RightSidebar from './sideBar';
+import SignUp from './Signup';
 type Props = {
   mobile: boolean
 }

@@ -1,9 +1,8 @@
-import { useMutation } from '@apollo/react-hooks';
 import { ErrorMessage, Field, Form as FForm, Formik } from 'formik';
 import React, { FC } from 'react';
-import { Button, Dropdown, Form as SForm } from 'semantic-ui-react';
+import { Button, Dropdown, Form as SForm, Radio } from 'semantic-ui-react';
 import * as Yup from 'yup';
-import DataGrid from './components/grid';
+import DataGrid from './grid';
 
 const gql = require('graphql-tag')
 
@@ -72,7 +71,7 @@ const options = [
 
 const SignUp: FC<Props> = (): any => {
   
-  const [registerMutation, { loading, error }] = useMutation(CREATE_USER_MUTATION)
+  // const [registerMutation, { loading, error }] = useMutation(CREATE_USER_MUTATION)
 
   const onSubmit = (values: any):void => {
       // alert(JSON.stringify(values, null, 2));
@@ -82,14 +81,23 @@ const SignUp: FC<Props> = (): any => {
         lastName: 'marco',
         isActive: true
       }
-      const r = registerMutation({ variables: { data } })
+      // const r = registerMutation({ variables: { data } })
   }
   
   return (
   <div className="regForm">
     <h1 className="heading">Please Fill the Following Form!</h1>
     <Formik
-      initialValues={{ firstName: '', lastName: '', email: '', password: '', date: '', gender: '' }}
+      initialValues = {{ 
+        firstName: '', 
+        lastName: '', 
+        email: '', 
+        password: '', 
+        date: '', 
+        gender: '', 
+        passport: '', 
+        degree: ''
+      }}
       validationSchema={Register}
       onSubmit={onSubmit}
     >
@@ -150,24 +158,41 @@ const SignUp: FC<Props> = (): any => {
             </div>
           </SForm.Group>
 
+          <SForm.Group widths="equal">
+            <div className="field customField">
+              <label>Passport</label>
+              <div className="ui fluid input">
+                <Field type="file" name="passport" />
+              </div>
+            </div>
+
+            <div className="field customField">
+              <label>Degree</label>
+              <div className="ui fluid input">
+                <Field type="file" name="degree" />
+              </div>
+            </div>
+          </SForm.Group>
+
           <div> <label>Gender</label> </div>
           <SForm.Group widths="equal">
-            <Field
-             
+            <SForm.Field>
+              <Radio
                 label='Male'
                 type="radio"
                 name='gender'
                 value='male'
                 checked={true}
               />
-
-            <Field
-                label='Female'
-                type="radio"
-                name='gender'
-                value='female'
-              />
-            {/* </SForm.Field> */}
+            </SForm.Field>
+            <SForm.Field>
+              <Radio
+                  label='Female'
+                  type="radio"
+                  name='gender'
+                  value='female'
+                />
+            </SForm.Field>
           </SForm.Group>
         
           <Button type="submit"  primary={true} >Submit</Button>

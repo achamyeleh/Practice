@@ -29,10 +29,10 @@ export default function MemeGenerator() {
     })
  }, [])
   return (
-    <div>
+    <div className="meme">
       <input name="meme" value={field} onChange={handleChange} />
       <Button onClick={handleClick}>Generate Meme</Button>
-      { !loading && <img src={meme.url} alt="image" /> } 
+      { !loading && <img className="pic" src={meme.url} alt="image" /> } 
       <label>{meme.name}.  {field }</label>
     </div>
   )

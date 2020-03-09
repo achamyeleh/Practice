@@ -1,14 +1,32 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { increment } from '../redux/counter/counterActions'
+import React from 'react';
+import { connect } from 'react-redux';
+import { Button } from 'semantic-ui-react';
 
 function Counter(props: any) {
+  const incrementt = () => {
+    props.dispatch({
+      type: "INCREMENT"
+    });
+  };
+
+  const decrementt = () => {
+    props.dispatch({
+      type: "DECREMENT"
+    });
+  };
+
+  const incrementtBy5 = () => {
+    props.dispatch({
+      type: "INCREMENTBY5"
+    });
+  };
+
   return (
-    <div>
+    <div className="counter">
       <h1>{props.count}</h1>
-      <button onClick={props.dispatch}>+</button>
-      <button>-</button>
-      <button>+5</button>
+      <Button className="primary" onClick={incrementt}>+</Button>
+      <Button className="secondary" onClick={()=>props.dispatch({ type: "DECREMENT"})}> -</Button>
+      <Button className="success" onClick={incrementtBy5}>+5</Button>
     </div>
   )
 }
@@ -19,14 +37,13 @@ const mapStateToProps = (state: any) => {
   }
 }
 
-const mapDispatchToProps = (dispatch: any) => {
-  return { 
-    dispatch: () => dispatch(increment())
-  }
-}
+// const mapDispatchToProps = (dispatch: any) => {
+//   return { 
+//     dispatch: () => dispatch(increment())
+//   }
+// }
 
 export default connect(
-  mapStateToProps, 
-  mapDispatchToProps
+  mapStateToProps
   )(Counter)
 
